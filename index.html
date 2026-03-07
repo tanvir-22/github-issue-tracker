@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Issue Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="geist bg-[#F8FAFC]  py-14 h-screen">
+    <div
+        class="bg-[#fff] space-y-2 w-[320px] p-5 md:p-10 shadow-lg md:w-[480px]  mx-auto rounded-md flex flex-col items-center justify-center ">
+        <div class=" flex flex-col items-center">
+            <img src="assets/github-logo.png" alt="">
+            <h2 class="pt-6 font-semibold md:text-2xl">GitHub Issues Tracker</h2>
+            <p class="text-[#64748B] text-[16px]">Sign in to manage your issues</p>
+        </div>
+        <div class="w-full ">
+            <h4 class="font-medium">Username</h4>
+            <input class="mt-2 w-full p-2 border-gray-300" type="text" placeholder="Enter Username">
+        </div>
+        <div class="w-full">
+            <h4 class="font-medium">Password</h4>
+            <input class="w-full mt-2 p-2 border-gray-300" type="password" placeholder="Enter Password">
+        </div>
+        <div class="w-full ">
+            <a class="btn btn-primary w-full" href="">Sign in</a>
+        </div>
+        <div>
+
+            <span class="font-medium">OR</span>
+
+
+        </div>
+        <p>Demo Credentials:</p>
+        <div class="bg-[#F8FAFC] w-full p-4 text-center">
+
+            <p><span class="font-semibold">Username: </span>admin
+                <br>
+                <span class="font-semibold">Password:</span> admin123
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="login.js"></script>
+</body>
+
+</html>
