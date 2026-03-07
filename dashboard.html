@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Issue Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="geist bg-[#F8FAFC] h-screen">
+
+    <header>
+
+        <div class="px-20 navbar bg-base-100 shadow-sm flex justify-between">
+            <div class=" flex gap-1 items-center">
+                <img class="w-9 " src="assets/github-logo.png" alt="">
+                <a class="font-bold text-xl">GitHub Issues Tracker</a>
+            </div>
+            <div class="flex gap-2">
+                <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+                <div class="">
+                    <div class="w-10 ">
+                        <button class="btn btn-primary">Search</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-[#fff] shadow-md mt-16  p-6 tab-btn-section md:w-[1110px] mx-auto">
+        <div class="flex gap-2">
+            <button class="btn btn-primary px-12 py-3">All</button>
+            <button class="btn px-12 py-3">Open</button>
+            <button class="btn px-12 py-3">Closed</button>
+        </div>
+    </section>
+
+
+    <section class="issue-section md:w-[1110px] mx-auto shadow-md p-6 mt-4  bg-[#fff]">
+        <div class="mt-4 flex gap-2  items-center justify-between">
+
+            <div class="flex gap-2">
+                <div class="flex items-center justify-center ">
+                    <div class=" rounded-full bg-[#ECE4FF]">
+                        <img class="w-12 p-2 " src="assets/Aperture.png" alt="">
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-[20px]">50 Issues</h4>
+
+                    <h4 class="text-gray-400 text-[16px]">Track and manage your project issues</h4>
+
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+
+                <div class="rounded-full bg-[#00A96E] w-1 h-1 p-1.5"></div>
+                <p>Open</p>
+                <div class="rounded-full bg-[#A855F7] w-1 h-1 p-1.5"></div>
+
+                <p>Closed</p>
+            </div>
+        </div>
+
+
+
+        <div class="card-section-div "><!--grid grid-col-4-->
+
+
+            <div class="card shadow-lg w-72  ">
+                <div class="p-5  ">
+
+                    <div class="flex justify-between py-2">
+                    <img class="w-[24px]" src="assets/Open-Status.png" alt="">
+                    <p class="bg-[#FEECEC] text-red-500 px-8 py-1 rounded-full text-[12px]">High</p>
+                </div>
+                <div class="py-2">
+                    <h4 class="font-semibold">Fix navigation menu on mobile devices</h4>
+                    <p class="text-gray-400 text-[12px]">The navigation menu doesn't collapse properly on mobile devices...</p>
+                    <div class="flex gap-2 pt-2">
+                        <p class="px-2 py-[6px] border-[#c03b3b] border-2 rounded-full bg-[#FECACA] text-[#EF4444] text-[12px]"><i class="fa-solid fa-bug"></i>  Bug</p>
+                        <p class="px-2 py-[6px] border-[#b19423] border-2  rounded-full bg-[#FDE68A] text-[#D97706] text-[12px]"><i class="fa-solid fa-life-ring"></i>  help wanted</p>
+                    </div>
+                </div>
+                </div>
+                
+                <div class=" border-t-2 border-t-gray-200 p-5">
+                
+                    <p class="text-gray-500 text-[13px]">#1
+                        by john_doe</p>
+                    <p class="text-gray-500 text-[13px]">1/15/2024</p>
+                </div>
+                </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
