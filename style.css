@@ -1,3 +1,9 @@
 .geist{
      font-family: "Geist", sans-serif;
 }
+.open-border{
+    border-top: 5px solid #00A96E;
+}
+.closed-border{
+    border-top: 5px solid #A855F7;
+}
