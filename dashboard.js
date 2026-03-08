@@ -160,6 +160,6 @@ const searchIssues = async()=>{
     total.innerText = `${result.data.length}`
    removePrimaryBtn()
     displayIssues(result.data)
-
+    input.value = ''
 }
 loadAllIssues()
