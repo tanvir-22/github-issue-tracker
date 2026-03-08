@@ -1,5 +1,8 @@
 const total = document.getElementById('totalCount');
 // const open = document.getElementById('openbtn');
+const cardInfoSection = document.getElementById('card-stat');
+const cardSection = document.getElementById('allCardContainer');
+const loader = document.getElementById('loader-section');
 let allData;
 let issueDetails;
 const removePrimaryBtn = ()=>{
@@ -8,24 +11,38 @@ const removePrimaryBtn = ()=>{
         btn.classList.remove('btn-primary')
     })
 }
-
+const showLoader = (value)=>{
+    if(value){
+        cardInfoSection.classList.add('hidden')
+        cardSection.classList.add('hidden')
+        loader.classList.remove('hidden')
+    }else{
+         cardInfoSection.classList.remove('hidden')
+        cardSection.classList.remove('hidden')
+        loader.classList.add('hidden')
+    }
+}
 const loadAllIssues = async () => {
-
+    showLoader(true)
     const response = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues`);
     const jsonData = await response.json();
     allData = jsonData.data;
     displayAllIssues(jsonData.data);
-
+    showLoader(false)
 
 }
 
 const displayAllIssues = (items,btn) => {
+    
     total.innerText = `${items.length}`
    if(btn){
      removePrimaryBtn();
     btn.classList.add('btn-primary')
    }
+   
      displayIssues(items)
+    
+
 }
 
 const displayOpenIssues = (items,btn) => {
@@ -53,6 +70,7 @@ const displayCloseIssues = (items,btn) =>{
 }
 
 const displayIssues = (Items)=>{
+  
      const cardSection = document.querySelector('.card-section-div');
     cardSection.innerHTML = ''
     Items.forEach((item) => {
@@ -89,7 +107,7 @@ const displayIssues = (Items)=>{
 
         cardSection.appendChild(cardDiv)
     })
-
+  
 }
 
 
