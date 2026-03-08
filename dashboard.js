@@ -132,4 +132,16 @@ const displayModal = (item)=>{
     document.getElementById('my_modal_5').showModal()
 
 }
+
+const searchIssues = async()=>{
+    const input = document.getElementById('searchInput');
+    const value = input.value.trim().toLowerCase().replace('/\s+/g','')
+  
+    const response = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${value}`);
+    const result = await response.json();
+    total.innerText = `${result.data.length}`
+   removePrimaryBtn()
+    displayIssues(result.data)
+
+}
 loadAllIssues()
