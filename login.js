@@ -5,7 +5,7 @@ const signin = document.getElementById('signinBtn');
 
 signin.addEventListener('click',()=>{
     if(username.value==='admin' && password.value==='admin123'){
-        window.location.assign('/dashboard.html')
+        window.location.assign('dashboard.html')
         
     }
     else{
